@@ -1,0 +1,57 @@
+
+#container {
+    font-family: Helvetica;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#scoreboard {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    font-size: 1.4em;
+}
+
+#scoreboard > div:not(div.score) {
+    font-weight: bold;
+}
+
+#currentPlayer {
+    margin: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#buttons {
+    margin-top: 30px;
+    margin-right: 6px;
+}
+
+#buttons > button {
+    background-color: #55ad3a;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    float: right;
+}
+
+@media only screen and (max-width: 500px) {
+    #buttons > button {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      float: none;
+    }
+  }

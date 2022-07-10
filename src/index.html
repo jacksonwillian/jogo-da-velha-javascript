@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/container.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="header">
+            <div id="scoreboard">
+                <div> Jogador (X) </div>
+                <div> Jogador (O) </div>
+                <div id="score-x"> 3 vitórias</div>
+                <div id="score-o"> 4 vitórias</div>
+            </div>
+        </div>
+
+        <div>
+            <span id="currentPlayer"></span>
+        </div>
+
+        <div id="board"></div>
+
+
+        <div id="buttons">
+            <button onclick="controller.reiniciar();"> Reiniciar Jogo</button>
+        </div>
+
+    </div>
+
+    <script src="./js/controller.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/score.js"></script>
+
+    <script>
+
+        let selectors = {
+            boardSelector: '#board',
+            cellSelector: 'cells',
+            headerSelector: '#header',
+            currentPlayerSelector: '#currentPlayer',
+            scoreXSelector: '#score-x',
+            scoreOSelector: '#score-o',
+        };
+
+        let controller = new Controller(
+            boardObject,
+            selectors,
+            new Score(),
+        );
+        controller.init();
+    </script>
+
+
+</body>
+
+</html>
