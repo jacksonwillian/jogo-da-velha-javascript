@@ -1,0 +1,22 @@
+#board {
+    margin: 0 auto;
+    background-color: #0b787c;
+    color: #fff;
+    border: 6px solid #055457;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    cursor: pointer;
+    min-width: 200px;
+}
+
+#board > div {
+    border: 6px solid #055457;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 80px;
+}
